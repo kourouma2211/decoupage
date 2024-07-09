@@ -387,3 +387,149 @@ p {
     line-height: 1.6;
     margin-bottom: 20px;
 }
+/* Style général pour tout type d'appareil */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    transition: background-color 0.3s ease;
+}
+
+.cover-image {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    margin-top: 60px; /* Ajustement pour le header fixe */
+}
+
+.cover-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.cover-text h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    margin-top: 20px; /* Marge ajoutée pour séparer de l'image de couverture */
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #666;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Styles spécifiques pour les appareils mobiles */
+@media only screen and (max-width: 768px) {
+    .cover-image {
+        height: 250px;
+    }
+    
+    .cover-text {
+        top: 40%;
+    }
+    
+    .cover-text h1 {
+        font-size: 2em;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+    
+    nav ul li {
+        margin-bottom: 10px;
+    }
+    
+    main {
+        padding: 10px;
+    }
+    
+    section {
+        padding: 15px;
+    }
+}
